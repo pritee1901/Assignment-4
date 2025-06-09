@@ -1,0 +1,47 @@
+
+'''
+
+#task: 1
+try:
+    with open("my_file.txt", "r") as file:
+        print("reading file content:")
+        for line in file:
+            print(line.strip())
+except FileNotFoundError:
+    print('the file does not exit.')
+
+
+    #task: 1(error generate)
+    try:
+        with open("my.txt", "r") as file:
+            print("reading file content:")
+            for line in file:
+                print(line.strip())
+    except FileNotFoundError:
+        print('the file does not exit.')
+
+
+        '''
+
+
+# task 2
+#  input and write to file
+try:
+    user_input = input("Enter some data: ")
+    with open("output.txt", "w") as file:
+        file.write(user_input + "\n")
+    print("Text successfully written to the file output.txt")
+
+   # Append add data
+    with open("output.txt", "a") as file:
+        file.write("Learning file handling in Python.\n")
+    print("Data successfully appended.")
+
+    # Read and display
+    print("Final content of output.txt:")
+    with open("output.txt", "r") as file:
+        for line in file:
+            print(line.strip())
+
+except Exception as e:
+    print("An error occurred:", e)
