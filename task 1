@@ -1,0 +1,19 @@
+#task: 1
+try:
+    with open("my_file.txt", "r") as file:
+        print("reading file content:")
+        for line in file:
+            print(line.strip())
+except FileNotFoundError:
+    print('the file does not exit.')
+
+
+    #task: 1(error generate)
+    try:
+        with open("my.txt", "r") as file:
+            print("reading file content:")
+            for line in file:
+                print(line.strip())
+    except FileNotFoundError:
+        print('the file does not exit.')
+
